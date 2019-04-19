@@ -8,7 +8,7 @@ use Composer\Script\Event;
 
 class ComposerInstall
 {
-    public static function postPackageInstall(PackageEvent $event)
+    public static function postInstallCmd(Event $event)
     {
         $vendorPath = $event->getComposer()->getConfig()->get('vendor-dir');
         $envFilePath = $vendorPath.'/../.env';
