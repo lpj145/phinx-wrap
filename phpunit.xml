@@ -1,0 +1,9 @@
+<phpunit
+        bootstrap="./tests/bootstrap.php"
+        colors="true"
+        columns="max"
+>
+    <testsuite name="Test Suite">
+        <directory>./tests/</directory>
+    </testsuite>
+</phpunit>

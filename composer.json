@@ -1,0 +1,35 @@
+{
+    "name": "madantas/phinx-wrapper",
+    "description": "This package simply phinx configuration by passing env vars to commands or base you app console to inject config by constructor.",
+    "type": "library",
+    "keywords": ["phinx", "wrapper", "phinx-wrapper", "migrations"],
+    "require": {
+        "robmorgan/phinx": "0.10.6",
+        "vlucas/phpdotenv": "^3.3@dev",
+        "composer/composer": "^1.9@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcos Dantas",
+            "email": "marcos.adantas@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "mdantas\\PhinxWrap\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require-dev": {
+        "phpunit/phpunit": "^8.2@dev"
+    },
+    "scripts": {
+        "post-package-install": [
+            "mdantas\\PhinxWrap\\ComposerInstall::postPackageInstall"
+        ]
+    },
+    "bin": [
+        "bin/phinxwrap"
+    ]
+}
