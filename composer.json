@@ -26,7 +26,9 @@
         "phpunit/phpunit": "^8.2@dev"
     },
     "scripts": {
-      "post-install-cmd": "mdantas\\PhinxWrap\\ComposerInstall::postInstallCmd"
+        "post-install-cmd": "mdantas\\PhinxWrap\\ComposerInstall::postInstallCmd",
+        "post-package-install": "mdantas\\PhinxWrap\\ComposerInstall::postPackageInstall",
+        "post-autoload-dump": "mdantas\\PhinxWrap\\ComposerInstall::postAutoloadDump"
     },
     "bin": [
         "bin/phinxwrap"
