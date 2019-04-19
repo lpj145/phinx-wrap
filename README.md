@@ -13,12 +13,12 @@ composer require mdantas/phinx-wrap
 $config = \mdantas\PhinxWrap\PhinxConfiguration::envToConfigInterface(__DIR__.'/../')
 
 $application = new \mdantas\PhinxWrap\ConsoleApplication(
-        \mdantas\PhinxWrap\PhinxConfiguration::envToConfigInterface(__DIR__.'/../')
+        $config
 );
 ````
 
 ````php
-public function __construct(ConfigInterface $config)
+public function __construct(\Phinx\Config\ConfigInterface $config)
 {
     $this->addCommands([
         new Create($config),
