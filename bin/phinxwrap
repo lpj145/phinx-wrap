@@ -11,10 +11,12 @@ if (!$autoloader()) {
     );
 }
 
-$envPath = __DIR__.'/../';
+$envPath = __DIR__.'/../../../';
 
-if (file_exists($envPath.'../../.env')) {
-    $envPath .= '../../';
+if (!file_exists($envPath.'.env')) {
+    die(
+            'File env on local root path: '.$envPath.' not exist'.PHP_EOL
+    );
 }
 
 (new \mdantas\PhinxWrap\ConsoleApplication(

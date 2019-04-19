@@ -1,5 +1,5 @@
 {
-    "name": "madantas/phinx-wrapper",
+    "name": "mdantas/phinx-wrapper",
     "description": "This package simply phinx configuration by passing env vars to commands or base you app console to inject config by constructor.",
     "type": "library",
     "keywords": ["phinx", "wrapper", "phinx-wrapper", "migrations"],
