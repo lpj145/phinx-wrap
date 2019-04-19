@@ -11,8 +11,14 @@ if (!$autoloader()) {
     );
 }
 
+$envPath = __DIR__.'/../';
+
+if (file_exists($envPath.'../../.env')) {
+    $envPath .= '../../';
+}
+
 (new \mdantas\PhinxWrap\ConsoleApplication(
-        \mdantas\PhinxWrap\PhinxConfiguration::envToConfigInterface(__DIR__.'/../')
+        \mdantas\PhinxWrap\PhinxConfiguration::envToConfigInterface($envPath)
 ))
     ->run()
 ;
