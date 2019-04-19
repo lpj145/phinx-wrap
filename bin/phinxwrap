@@ -11,7 +11,7 @@ if (!$autoloader()) {
     );
 }
 
-$envPath = __DIR__.'/../../../';
+$envPath = __DIR__.'/../../../../';
 
 if (!file_exists($envPath.'.env')) {
     die(
