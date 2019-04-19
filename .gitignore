@@ -1,5 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
-composer.lock
-.idea
+/.idea
 .env
-/vendor
+/vendor/
+/composer.lock
