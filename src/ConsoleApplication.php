@@ -16,18 +16,24 @@ use Phinx\Console\PhinxApplication;
 
 class ConsoleApplication extends PhinxApplication
 {
-    public function __construct(ConfigInterface $config, $version = null)
+    public function __construct(ConfigInterface $config = null, $version = null)
     {
         parent::__construct($version);
 
         $this->addCommands([
-            new Create($config),
-            new Status($config),
-            new Migrate($config),
-            new Rollback($config),
-            new SeedCreate($config),
-            new SeedRun($config),
-            new Test($config),
+            new Init()
         ]);
+
+        if (null !== $config) {
+            $this->addCommands([
+                new Create($config),
+                new Status($config),
+                new Migrate($config),
+                new Rollback($config),
+                new SeedCreate($config),
+                new SeedRun($config),
+                new Test($config),
+            ]);
+        }
     }
 }

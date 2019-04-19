@@ -12,15 +12,14 @@ if (!$autoloader()) {
 }
 
 $envPath = __DIR__.'/../../../../';
+$phinxConfig = null;
 
-if (!file_exists($envPath.'.env')) {
-    die(
-            'File env on local root path: '.$envPath.' not exist'.PHP_EOL
-    );
+if (file_exists($envPath.'.env')) {
+    $phinxConfig = \mdantas\PhinxWrap\PhinxConfiguration::envToConfigInterface($envPath);
 }
 
 (new \mdantas\PhinxWrap\ConsoleApplication(
-        \mdantas\PhinxWrap\PhinxConfiguration::envToConfigInterface($envPath)
+        $phinxConfig
 ))
     ->run()
 ;

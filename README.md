@@ -1,10 +1,25 @@
-No have another library to manage migrations easily and simple with [phinx](https://phinx.org/), and i make this package to easily phinx commands or application console, is intention are you can add commands to your application console or use ````bin/phinxwrap```` by environments vars or inject ``Phinx\Config\Config`` to constructor of each command.
+No have another library to manage migrations easily and simple like [phinx](https://phinx.org/), and i make this package to easily phinx commands or application console, is intention are you can add commands to your application console or use ````bin/phinxwrap```` by environments vars or inject ``Phinx\Config\Config`` to constructor of each command.
 ### install
 `````php
 composer require mdantas/phinx-wrap
 `````
 ##### requirements
 ``phinx 0.10.6``
+
+#### Environment example
+````dotenv
+DATABASE_MIGRATIONS_PATH=%%PHINX_CONFIG_DIR%%/db/migrations
+DATABASE_SEEDS_PATH=%%PHINX_CONFIG_DIR%%/db/seeds
+DATABASE_VERSION=creation
+DATABASE_STAGE=development
+DATABASE_ADAPTER=mysql
+DATABASE_NAME=development_db
+DATABASE_USER=root
+DATABASE_PASSWORD=
+DATABASE_HOST=localhost
+DATABASE_PORT=3306
+DATABASE_CHARSET=utf8
+````
 
 ### Examples
 ````php
