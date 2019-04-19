@@ -1,12 +1,12 @@
 No have another library to manage migrations easily and simple with [phinx](https://phinx.org/), and i make this package to easily phinx commands or application console, is intention are you can add commands to your application console or use ````bin/phinxwrap```` by environments vars or inject ``Phinx\Config\Config`` to constructor of each command.
-###install
+### install
 `````php
 composer require mdantas/phinx-wrap
 `````
-#####requirements
+##### requirements
 ``phinx 0.10.6``
 
-###Examples
+### Examples
 ````php
 //In your app.php
 //Config read from env or inject any place you need.
@@ -32,5 +32,5 @@ public function __construct(ConfigInterface $config)
 }
 ````
 
-###Note
+### Note
 All phinx commands are based on package [Symfony Console](https://packagist.org/packages/symfony/console).
