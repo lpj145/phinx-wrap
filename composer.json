@@ -6,8 +6,7 @@
     "version": "1.0.0",
     "require": {
       "robmorgan/phinx": "0.10.6",
-      "vlucas/phpdotenv": "3.3.3",
-      "composer/composer": "1.8.5"
+      "vlucas/phpdotenv": "3.3.3"
     },
     "license": "MIT",
     "authors": [
@@ -24,11 +23,6 @@
     "minimum-stability": "dev",
     "require-dev": {
         "phpunit/phpunit": "^8.2@dev"
-    },
-    "scripts": {
-        "post-install-cmd": "mdantas\\PhinxWrap\\ComposerInstall::postInstallCmd",
-        "post-package-install": "mdantas\\PhinxWrap\\ComposerInstall::postPackageInstall",
-        "post-autoload-dump": "mdantas\\PhinxWrap\\ComposerInstall::postAutoloadDump"
     },
     "bin": [
         "bin/phinxwrap"
