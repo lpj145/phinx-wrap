@@ -1,7 +1,7 @@
 No have another library to manage migrations easily and simple like [phinx](https://phinx.org/), and i make this package to easily phinx commands or application console, is intention are you can add commands to your application console or use ````bin/phinxwrap```` by environments vars or inject ``Phinx\Config\Config`` to constructor of each command.
 ### install
 `````php
-composer require mdantas/phinx-wrap
+composer require mdantas/phinx-wrapper
 //For generate env file, this not overwrite you env file.
 vendor/bin/phinxwrap init_env
 `````
