@@ -2,6 +2,8 @@ No have another library to manage migrations easily and simple like [phinx](http
 ### install
 `````php
 composer require mdantas/phinx-wrap
+//For generate env file, this not overwrite you env file.
+vendor/bin/phinxwrap init_env
 `````
 ##### requirements
 ``phinx 0.10.6``
